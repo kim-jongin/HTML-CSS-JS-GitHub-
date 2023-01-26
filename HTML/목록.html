@@ -9,7 +9,7 @@
   <title>HTML & CSS</title>
 </head>
 <body>
-
+<!-- 
   <h1>수련회 준비물</h1>
   <ul>
     <li>이틀치 옷</li>
@@ -22,7 +22,53 @@
         <li>교재</li>
       </ul>
     </li>
-  </ul>
+  </ul> -->
 
+  <main>
+    <section class="result">
+
+      <h1>계란볶음밥 만들기</h1>
+      <ol>
+        <li>재료 준비
+          <ul>
+            <li>밥</li>
+            <li>계란</li>
+            <li>파</li>
+            <li>간장</li>
+          </ul>
+        </li>
+        <li>파를 기름에 볶기</li>
+        <li>밥 넣고 볶기</li>
+        <li>계란을 넣고 스크램블</li>
+        <li>간장을 넣고 마저 볶아 완성</li>
+      </ol>
+
+    </section>
+    <section class="controls"></section>
+  </main>
+
+  <script>
+    const controls = [
+      {
+        obj: {
+          name: 'ol 요소의 속성들',
+          query: 'ol'
+        },
+
+        fields: [
+          {
+            type: 'radio',
+            attr: 'type',
+            opts: ['1', 'I', 'i', 'A', 'a']
+          },
+          {
+            type: 'number',
+            attr: 'start',
+            default: 1
+          },
+        ],
+      }
+    ]
+  </script>
 </body>
 </html>
