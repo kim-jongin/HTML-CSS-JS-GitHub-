@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../html-css-tester.css">
+  <script defer src="../../html-css-tester.js"></script>
+
+  <script src="../pretty.css"></script>
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+  <title>HTML & CSS</title>
+</head>
+<body>
+
+  <main>
+    <div class="result">
+      <h1>a 태그를 사용한 링크들</h1>
+      <a href="https://easy-subtitle.com/">Easy Subtitle로의 하이퍼링크</a>
+    </div>
+    <div class="controls"></div>
+  </main>
+
+  <script>
+    const controls = [
+      {
+        obj: {
+          name: 'a 요소',
+          query: 'a'
+        },
+        fields: [
+          {
+            type: 'radio',
+            attr: 'target',
+            opts: [
+              '_self',
+              '_blank',
+              '_parent',
+              '_top'
+            ]
+          }
+        ]
+      }
+    ]
+
+  </script>
+  
+</body>
+</html>
