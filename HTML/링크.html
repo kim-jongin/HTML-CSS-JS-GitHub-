@@ -1,65 +1,26 @@
+<!--
+    <a href="연결할 주소" target="링크를 열 곳 옵션">
+    
+    <a>에 사용되는 요소
+        _self : 현재 창 -> 기본
+        _blank : 새 창 -> 텍스트나 내부 이미지의 alt등으로 명시 필요
+        _parent : 부모 프레임 -> <iframe>사용시
+        _top : 최상위 프레임 -> <iframe>사용시
+-->
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../html-css-tester.css">
-  <script defer src="../../html-css-tester.js"></script>
-
-  <script src="../pretty.css"></script>
-
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
-
-  <!-- UIkit JS -->
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
-  <title>HTML & CSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
-  <main>
-    <div class="result">
-      <h1>a 태그를 사용한 링크들</h1>
-      <a href="https://easy-subtitle.com/">Easy Subtitle로의 하이퍼링크</a>
-    </div>
-    <div class="controls"></div>
-  </main>
-
-  <script>
-    const controls = [
-      {
-        obj: {
-          name: 'a 요소',
-          query: 'a'
-        },
-        fields: [
-          {
-            type: 'radio',
-            attr: 'target',
-            opts: [
-              '_self',
-              '_blank',
-              '_parent',
-              '_top'
-            ]
-          }
-        ]
-      }
-    ]
-
-  </script>
-  
-
-  <h1>Contacts</h1>
-  <address>
-    웹사이트 주소: <a href="https://www.yalco.kr">yalco.kr</a> <br>
-    오피스: 전산시 개발구 코딩동 123번길 45 <br>
-    전화 <a href="tel:010-1234-5678">010-1234-5678</a> <br>
-    이메일: <a href="mailto:yalco@kakao.com">yalco@kakao.com</a>
-  </address>
-  
+    <!-- 특정 사이트로 이동
+    <a href="https://www.google.com" target="_blank">구글로 가기 (새 창에서)</a>
+    <br>
+    <a href="https://showcases.yalco.kr/html-css/01-07/yalco-logo.png" alt="얄코 사이트로(새 탭에서)"></a> -->
 </body>
 </html>
+
