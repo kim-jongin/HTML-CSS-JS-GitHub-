@@ -1,5 +1,17 @@
-<link rel="stylesheet" href="https://showcases.yalco.kr/html-css/01-06/table.css">
+<!--
+    <table> : 테이블
+    <caption> : 표 설명 또는 제목 -> 선택사항
+    <tr> : 테이블의 행
+    <td> : 테이블의 데이터 셀
 
+    <thead> : 테이블의 헤더 부분 -> <tbody>앞에 위치해야 함
+    <tbody> : 테이블의 본문 -> 본문을 담음
+    <tfoot> : 테이블의 푸터 부분 -> <tbody>뒤에 위치해야 함
+    <th> : 열 또는 행의 헤더 -> scope속성으로 row,col 중 선택
+    <colspan> : 열 병합
+    <rowspan> : 행 병합
+    <colgroup> : 표에 열을 묶어 속성 부여 -> 표에 열을 
+-->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -7,11 +19,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./table.css">
+  <link rel="stylesheet" href="https://showcases.yalco.kr/html-css/01-06/table.css">
+
   <title>HTML & CSS table</title>
 </head>
 <body>
     <table>
+		<colgroup>
+			<col class="weekend">
+			<col span="5">
+			<col class="weekend">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">일</th>
+				<th scope="col">월</th>
+				<th scope="col">화</th>
+				<th scope="col">수</th>
+				<th scope="col">목</th>
+				<th scope="col">금</th>
+				<th scope="col">토</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+			</tr>
+			<tr>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+			</tr>
+			<tr>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+			</tr>
+			<tr>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+				<td>_</td>
+			</tr>
+		</tbody>
+	</table>
+	
+    <!-- <table>
 		<caption>웹개발 공부 기록</caption>
 		<thead>
 			<tr>
@@ -49,87 +119,7 @@
 				<td>120분</td>
 			</tr>
 		</tfoot>
-	</table>
+	</table> -->
 
 </body>
 </html>
-
-<!-- 
-<table>
-    <tr>
-        <td>1</td>
-        <td colspan="2">2</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td rowspan="3">3</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td colspan="2" rowspan="2">4</td>
-    </tr>
-    <tr>
-        <td>1</td>
-    </tr>
-</table> -->
-
-
-<!-- <table>
-    <colgroup>
-        <col class="weekend">
-        <col span="5">
-        <col class="weekend">
-    </colgroup>
-    <thead>
-        <tr>
-            <th scope="col">일</th>
-            <th scope="col">월</th>
-            <th scope="col">화</th>
-            <th scope="col">수</th>
-            <th scope="col">목</th>
-            <th scope="col">금</th>
-            <th scope="col">토</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-    </tbody>
-</table> -->
