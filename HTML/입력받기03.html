@@ -1,0 +1,39 @@
+<!--
+    <textarea> 전용 속성
+        cols : 글자수 단위의 너비 -> 기본값 20
+        rows : 표시되는 줄 수
+
+    옵션 관련 속성
+        multiple : <select> -> 다중 선택 가능, 드랍다운 대신 상자로 표시
+        selected : <option> -> 선택됨 (checkbox, radio의 checked처럼)
+        value : <option> -> 실제로 전송될 값
+        list : <input> -> 연결할 <datalist>의 ID
+
+    <progress> 태그 속성
+        max : 최대값 -> 기본 1
+        value : 진행 수치 -> JS로 변경
+
+    <meter> 태그 속성
+        min, max : 최소값과 최대값
+        low, height : 전체 범위를 3등분 하는 두 수치
+        optimum : 이상적인 값 -> 3개의 구간 중 한 곳에 위치
+        value : 실제 값
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        input vs textarea의 차이 
+            input : value라는 값 안에 default값을 설정
+            textarea : 태그 사이에 기본값을 설정
+    -->
+    <textarea name="" id="" cols="30" rows="10">종인</textarea>
+</body>
+</html>
