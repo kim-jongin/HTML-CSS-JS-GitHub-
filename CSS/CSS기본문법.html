@@ -1,0 +1,102 @@
+<!-- <h1>CSS 기본 문법</h1>
+선택자 {
+    속성1: 값;
+    속성2: 값;
+    /* ... */
+  }
+
+   -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../html-css-tester.css">
+  <script defer src="../../html-css-tester.js"></script>
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+  <title>HTML & CSS</title>
+</head>
+<body>
+
+  <main>
+    <section class="result">
+
+      <!-- 시작 -->
+
+      <p>
+        <strong>font-style</strong> 속성은 글자를 기울일 때 사용할 수 있습니다. <br><br>
+        <em>italic</em>과 <em>oblique</em>은 얼핏 보면 비슷한데 <br>
+        italic이 '기울여서 쓴' 서체라면 <br>
+        oblique는 본래 서체를 기울여놓은 것입니다. <br><br>
+        서체마다 둘 다 있거나 한 쪽만 있거나 둘 다 없을 수도 있는데 <br>
+        이들은 한쪽이 없을 시 상호 교차되어 사용됩니다.
+      </p>
+
+      <hr>
+
+      <p>
+        <strong>font-weight</strong> 속성은 글자의 굵기를 조절합니다. <br><br>
+        서체가 어떤 굵기를 지원하느냐에 따라 <em>normal</em>과 <em>bold</em>중에 선택하거나 <br>
+        100~900 사이 100 단위의 수치를 사용합니다. <br><br>
+
+        <a href="https://developer.mozilla.org/ko/docs/Web/CSS/font-weight#%EC%9D%BC%EB%B0%98%EC%A0%81%EC%9D%B8_%EA%B0%80%EC%A4%91%EC%B9%98_%EC%9D%B4%EB%A6%84_%EB%A7%A4%ED%95%91" target="_blank">굵기마다의 이름 매핑 보기</a>
+      </p>
+
+      <!-- 끝 -->
+
+    </section>
+    <section class="controls"></section>
+  </main>
+
+  <script>
+    const controls = [
+      {
+        obj: {
+          name: 'p 요소들',
+          query: 'p'
+        },
+
+        fields: [
+          {
+            type: 'select',
+            style: 'font-style',
+            opts: [
+              'normal',
+              'italic',
+              'oblique'
+            ]
+          },
+          {
+            type: 'select',
+            style: 'font-weight',
+            opts: [
+              'normal',
+              'bold',
+              '100',
+              '200',
+              '300',
+              '400',
+              '500',
+              '600',
+              '700',
+              '800',
+              '900',
+            ]
+          },
+        ]
+      }
+    ]
+  </script>
+  
+</body>
+</html>
