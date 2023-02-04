@@ -1,0 +1,102 @@
+<!-- p {
+    /* left, center, right, justify */
+    text-align: left;
+  
+    letter-spacing: 0;
+    word-spacing: 0;
+    line-height: 1.5em;
+  } -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel='stylesheet' href='../../html-css-tester.css' />
+
+  <script defer src="../../html-css-tester.js"></script>
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+
+  <style>
+    div {
+      padding: 24px;
+      border: 2px solid #eee;
+      width: 400px;
+    }
+  </style>
+
+  <title>HTML & CSS 문단과 목록 스타일</title>
+
+</head>
+<body>
+
+  <main>
+    <section class="result">
+
+      <!-- 시작 -->
+
+      <div>
+        <h1>정렬과 간격</h1>
+        <p>
+          <strong>text-align</strong> 속성은 텍스트의 정렬 방식을 지정합니다. 직관적으로 알 수 있듯, 기본값인 <em>left</em>는 왼쪽, <em>center</em>는 가운데, <em>right</em>은 오른쪽으로 텍스트(및 인라인 요소들)을 정렬하죠. <em>justify</em>는 왼쪽으로 정렬하면서, 텍스트가 여러 줄이 될 때 마지막 줄을 제외한 줄들의 오른쪽이 나란히 되도록 각 줄의 공간을 조절합니다.
+        </p>
+        <p>
+          <strong>letter-spacing</strong>으로는 자간, <strong>word-spacing</strong>으로는 단어 간격, <strong>line-height</strong>으로는 줄 높이를 조절할 수 있습니다.
+        </p>
+      </div>
+
+      <!-- 시작 -->
+
+    </section>
+    <section class="controls"></section>
+  </main>
+
+  <script>
+    const controls = [
+      {
+        obj: {
+          name: 'div 요소',
+          query: 'div'
+        },
+        fields: [
+          {
+            type: 'radio',
+            style: 'text-align',
+            opts: [
+              'left',
+              'right',
+              'center',
+              'justify'
+            ]
+          },
+          {
+            type: 'text',
+            style: 'letter-spacing',
+            default: '0'
+          },
+          {
+            type: 'text',
+            style: 'word-spacing',
+            default: '0'
+          },
+          {
+            type: 'text',
+            style: 'line-height',
+            default: '1.5em'
+          },
+        ]
+      },
+    ]
+  </script>
+  
+</body>
+</html>
