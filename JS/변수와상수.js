@@ -15,3 +15,16 @@ console.log(SALUTATION, person);
 person = '영희';
 
 console.log(SALUTATION, person);
+
+/* 
+변수
+-담긴 값이 바뀔 수 있는 주머니
+-let사용
+*/
+
+let x;
+console.log(x); //x = undefined  -> JS에서 undefined는 하나의 값이다.
+
+let x = 1;
+console.log(x); //x = 1  -> undefined에서 1로 변경(초기화)되기에 값이 바뀐다는 표현보다는 다른 값을 가리킨다로 표현하는게 옳음
+
