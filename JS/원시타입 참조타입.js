@@ -47,3 +47,34 @@ array2[2] = false;
 
 console.log('array1:', array1);
 console.log('array2:', array2);
+
+//메모리 상세
+//1. 원시타입
+let number1 = 1;
+number2 = number1;
+number2 = 2;
+
+console.log(number1, number2);
+
+//2. 참조타입
+//a.객체
+const obj1 = {
+  num: 1,
+  str: 'ABC',
+  bool: true
+};
+
+const obj2 = obj1;
+
+obj2.num = 2;
+
+console.log(obj1, obj2);
+
+//b.배열
+const array1 = [1, 'ABC', true];
+const array2 = array1;
+
+array2[1] = '가나다';
+
+console.log(array1, array2);
+
