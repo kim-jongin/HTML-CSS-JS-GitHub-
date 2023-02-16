@@ -44,3 +44,29 @@ console.log(xx, yy);
 }
 
 console.log(xx, yy);
+
+//스코프체인 - scope chain
+
+//stack - 후입선출(나중에 들어온 것이 먼저 나감)
+let a = 0;
+let b = 1;
+let c = 2;
+console.log('시점: 1', a, b, c);
+
+{
+  let a = 'A';
+  let b = 'B';
+  console.log('시점2: ', a, b, c);
+
+
+{
+  let a = '가';
+  console.log('시점3: ', a, b, c);
+}
+
+console.log('시점4: ', a, b, c);
+}
+console.log('시점5: ', a, b, c);
+//블럭 안의 해당 변수/상수가 없으면 바깥쪽으로 찾아 나감 - 체이닝
+
+
