@@ -114,3 +114,37 @@ for (let i = 0; i < numbers1.length; i++) {
   numbers1[i]++; // ⚠️ 실제 값에 인덱스로 접근 - 원본 배열의 내용 변경
 }
 console.log(numbers1, numbers2);
+
+// continue - 한 루프를 건너뜀
+for (let i = 1; i <= 10; i++) {
+  if (i % 3 === 0) continue;
+  console.log(i);
+}
+
+console.log('for 루프 종료');
+
+//break - 블록을 종료하고 빠져나옴
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) break;
+  console.log(i);
+}
+
+console.log('for 루프 종료');
+
+//label - 중첩된 반복문을 명명하여 continue 또는 break에 사용
+outer:
+for (let i = 1; i < 10; i++) {
+
+  inner:
+  for (let j = 1; j < 10; j++) {
+
+    if (j % 2 === 0) continue inner;
+    if (i * j >= 30) continue outer;
+    
+    if (j > 8) break inner;
+    if (i - j > 7) break outer;
+
+    console.log(i, j, i * j);
+  }
+}
+
