@@ -154,3 +154,19 @@ console.log(JongChicken.contact());
 // 인스턴스의 수와 관계없이 메모리 한 곳만 차지
 // 인스턴스 없이 클래스 차원에서 호출
 // 정적 메서드에서는 정적 필드만 사용 가능
+
+//클래스는 함수
+class Dog {
+  bark () {
+    return '멍멍';
+  }
+}
+
+console.log(typeof Dog);
+
+const 개 = Dog; // 할당될 수 있는 일급 객체
+const 바둑이 = new 개();
+
+console.log(바둑이); // 콘솔에 나타난 타입 확인
+//typeof시 function으로 구분
+//일급 객체, 다른 곳에 할당 가능
