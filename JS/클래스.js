@@ -39,3 +39,29 @@ class YalcoChicken {
 const chain2 = YalcoChicken('강남', 17);
 //이 외에도 차이들이 있음 - 클래스에는 이후 배울 엄격모드 적용
 
+//constructor 메서드 
+/* 
+인스턴스 생성시 인자를 받아 프로퍼티를 초기화함
+클래스에 하나만 있을 수 있음 - 초과시 오류 발생
+다른 메서드 이름을 쓸 수 없음
+기본값 사용 가능
+필요없을 (인자가 없을 때 등) 시 생략 가능
+값을 반환하지 말 것! 생성자 함수처럼 암묵적으로 this 반환
+*/
+
+class Person {
+  constructor (name, age, married = false) {
+    this.name = name;
+    this.age = age;
+    this.married = married;
+  }
+}
+
+const person1 = new Person('박영희', 30, true);
+const person2 = new Person('오동수', 18);
+console.log(person1, person2);
+
+// 인스턴스 초기화가 필요없는 클래스
+class Empty {}
+console.log(new Empty());
+
