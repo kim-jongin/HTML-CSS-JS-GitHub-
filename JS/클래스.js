@@ -65,3 +65,22 @@ console.log(person1, person2);
 class Empty {}
 console.log(new Empty());
 
+//클래스와 메서드
+class Dog {
+  bark () {
+    return '멍멍';
+  }
+}
+const badugi = new Dog();
+console.log(badugi, badugi.bark());
+
+//생성자 함수에 넣은 함수의 차이 - 프로토타입으로 들어감
+//로그 펼쳐서 비교
+function Dog2 () {
+  this.bark = function () {
+    return '멍멍';
+  }
+}
+const badugi = new Dog2();
+console.log(badugi, badugi.bark());
+
