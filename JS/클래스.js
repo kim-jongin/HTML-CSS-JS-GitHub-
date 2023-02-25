@@ -130,3 +130,27 @@ console.log(chain1, chain1.introduce());
 chain1.menu['양념치킨'] = 13000;
 
 console.log(chain0.order('양념치킨'), chain1.order('양념치킨'));
+
+//정적 static 필드와 메서드
+class JongChicken {
+
+  // 정적 변수와 메서드
+  static brand = '얄코치킨';
+  static contact () {
+    return `${this.brand}입니다. 무엇을 도와드릴까요?`;
+  }
+
+  constructor (name, no) {
+    this.name = name;
+    this.no = no;
+  }
+  introduce () {
+    return `안녕하세요, ${this.no}호 ${this.name}점입니다!`;
+  }
+}
+
+console.log(JongChicken);
+console.log(JongChicken.contact());
+// 인스턴스의 수와 관계없이 메모리 한 곳만 차지
+// 인스턴스 없이 클래스 차원에서 호출
+// 정적 메서드에서는 정적 필드만 사용 가능
