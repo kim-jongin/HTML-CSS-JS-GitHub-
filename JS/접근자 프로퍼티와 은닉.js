@@ -86,3 +86,62 @@ console.log(chain1.no);
 //setter와는 다른 필드명을 사용하여 자기반복호출을 방지 
 //constructor의 no는 setter를 가리키고 실제 필드명은 _no가 됨
 
+//은닉
+//캡슐화 -> 객체지향의 주요 요소 중 하나 - 객체 내부의 값을 감추는것 
+//인스턴스의 프로퍼티 값을 함부로 열람하거나 수정하지 못하도록
+//자바스크립트의 필드는 기본적으로 public -> 은닉되지 않음
+
+//private를 통한 은닉
+class Employee {
+  #name = '';
+  #age = 0;
+  constructor (name, age) {
+    this.#name = name;
+    this.#age = age;
+  }
+}
+
+const emp1 = new Employee('김복동', 32);
+
+console.log(emp1);
+console.log(emp1.#name); // 오류 발생
+console.log(emp1['#name']); // undefined 반환
+//필드명 앞에 #을 붙임
+//클래스 바로 안쪽에 정의해야 함
+
+//클래스 내에서는 private필드에 접근 가능
+class Employee {
+  #name = '';
+  #age = 0;
+  constructor (name, age) {
+    this.#name = name;
+    this.#age = age;
+  }
+  get name () {
+    // [n]: n + 1 번째 글자를 반환
+    return this.#name[0] + '모씨';
+  }
+  get age () {
+    return this.#age - (this.#age % 10) + '대';
+  }
+  set age (age) {
+    if (typeof age === 'number' && age > 0) {
+      this.#age = age;
+    };
+  }
+  getOlder(years) { this.#age += years; }
+}
+
+const emp1 = new Employee('김복동', 22);
+
+console.log(emp1.name, emp1.age)
+emp1.age = 0;
+console.log(emp1.age);
+
+emp1.age = 35;
+console.log(emp1.age);
+
+emp1.getOlder(20);
+console.log(emp1.age);
+//constructor, 접근자 프로퍼티 혹은 기타 함수에서 접근 가능
+//인스턴스에서 바로 접근은 못하도록 은닉, 위 방법들로 제어
