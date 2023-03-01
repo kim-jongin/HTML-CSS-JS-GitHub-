@@ -124,3 +124,65 @@ const chain1 = new YorkNannyJongChicken ('종로', 48);
 console.log(chain1.introduce());
 
 console.log(chain1.order('양념치킨'));
+
+//super -> 부모 클래스의 constructor 또는 메서드 호출
+class JongChicken {
+  no = 0;
+  menu = { '후라이드': 10000, '양념치킨': 12000 };
+
+  constructor (name, no) {
+    this.name = name;
+    if (no) this.no = no;
+  }
+  introduce () {
+    return `안녕하세요, ${this.no}호 ${this.name}점입니다!`;
+  }
+  order (name) {
+    return `${this.menu[name]}원입니다.`
+  }
+}
+
+class ConceptJongChicken extends JongChicken {
+  #word = '';
+  constructor (name, no, word) {
+    super(name, no);
+    this.#word = word;
+  }
+  introWithConcept () {
+    return super.introduce() + ' ' + this.#word;
+  }
+  order (name) {
+    return super.order(name) + ' ' + this.#word;
+  }
+}
+
+const pikaChain = new ConceptJongChicken('도봉', 50, '피카피카~');
+
+console.log(pikaChain);
+
+console.log(pikaChain.introWithConcept());
+
+console.log(pikaChain.order('후라이드'));
+
+// super는 다른 클래스에서 상속받은 클래스에서만 사용 가능
+// 자식 클래스의 constructor 내에서는 부모 클래스의 constructor를 가리킴
+// 자식 클래스의 메서드 내에서는 부모 클래스를 가리킴
+// 부모 클래스의 constructor나 메서드에 추가적인 동작을 넣기 위해 사용
+
+//정적 메서드에서
+class JongChicken {
+  static brand = '얄코치킨';
+  static contact () {
+    console.log(`${this.brand}입니다. 무엇을 도와드릴까요?`);
+  }
+}
+
+class ConceptJongChicken extends JongChicken {
+  static contact () {
+    super.contact();
+    console.log('컨셉 가맹문의는 홈페이지를 참조하세요.');
+  }
+}
+
+ConceptJongChicken.contact();
+
