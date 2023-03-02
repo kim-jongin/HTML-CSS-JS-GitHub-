@@ -37,3 +37,15 @@ console.log(
   globalThis.myGlobalFuncl
 );
 
+// 표준 빌트인 객체 standard built-in objects
+// ECMAScript사양에 정의된 객체들 - 어떤 환경이든 사용 가능
+// 전역 프로퍼티로 제공됨 - globalThis등을 붙이지 않고 바로 사용 가능
+
+//Node.js에서는 globalThis 출력시 표준 빌트인 객체들은 출력하지 않음
+console.log(globalThis);
+
+//그러나 요소들로 갖고 있는 것은 확인 가능
+console.log(globalThis.Infinity);
+console.log(globalThis.isNaN);
+console.log(globalThis.Object);
+
