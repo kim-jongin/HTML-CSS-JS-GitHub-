@@ -49,3 +49,44 @@ console.log(globalThis.Infinity);
 console.log(globalThis.isNaN);
 console.log(globalThis.Object);
 
+//래퍼 객체 wrapper object
+const str = 'abced';
+console.log(
+  str.length,
+  str.toUpperCase(),
+  str[0]
+);
+
+const num = 123.4567;
+console.log(
+  typeof num.toString(),
+  num.toFixed(2)
+);
+//원시값이 어떻게 프로퍼티를 갖고 있을까? 
+
+//콘솔에서 프로퍼티와 프로토타입을 펼쳐 확인해보자.
+const str = new String('abcde');
+const num = new Number(123.4567);
+const bool = new Boolean(true);
+
+console.log(typeof str, str);
+console.log(typeof num, num);
+console.log(typeof bool, bool);
+
+// Number, String, Boolean 등은 표준 빌트인 객체에 속하는 래퍼 객체
+// 원시값을 필요시 래퍼 객체로 감싸서 wrap 그것의 인스턴스로 만들어 기능 실행
+// 원시값에서 객체를 사용하듯 해당 래퍼 객체의 프로퍼티를 호출할 때 래핑이 발생.
+
+// 해당 기능 사용 후에는 원시 객체로 돌아감 - 메모리 절약
+const str = 'abcde';
+console.log(str.length);
+console.log(typeof str, str);
+
+// valueOf 함수 - 래퍼 객체의 인스턴스에서 원시값 반환
+const str = new String('abcde');
+const num = new Number(123.4567);
+const bool = new Boolean(true);
+
+console.log(str.valueOf());
+console.log(num.valueOf());
+console.log(bool.valueOf());
