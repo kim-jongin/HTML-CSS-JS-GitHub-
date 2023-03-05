@@ -270,3 +270,21 @@ console.log(word.replaceAll('밥', '라면'));
 console.log(word.replaceAll(/밥/g, '라면'));
 // replaceAll은 문자열도 자동으로 /.../g처럼 인식
 
+//메서드 체이닝
+//값을 반환하는 인스턴스 메서드를 연속으로 사용
+
+const word = ' 모두 HELLO! ';
+const rpFrom = 'hello';
+const rpTo = 'bye';
+
+console.log(
+  word
+  .trimStart()                // '모두 HELLO! '
+  .toLowerCase()              // '모두 hello! '
+  .replaceAll(rpFrom, rpTo)   // '모두 bye! '
+  .toUpperCase()              // '모두 BYE! '
+  .repeat(3)                  // '모두 BYE! 모두 BYE! 모두 BYE! '
+  .trimEnd()                  // '모두 BYE! 모두 BYE! 모두 BYE!'
+);
+
+console.log(word); // 원본은 그대로
