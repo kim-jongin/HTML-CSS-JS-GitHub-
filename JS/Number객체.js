@@ -72,6 +72,48 @@ console.log(Number.NEGATIVE_INFINITY);
 // 전역 객체(globalThis)의 NaN과 같은 값
 console.log(Number.NaN);
 
+// III. 정적 메서드
+// 1. 전역 객체에도 있는 메서드들
+// a. 동일하지 않음 : isFinite, isNaN
+// 전역 객체 (globalThis)의 해당 메소드와의 차이: 암묵적 타입 변환을 하지 않음
+console.log(
+  isFinite(null), // null을 0으로 변환
+  Number.isFinite(null)
+);
+console.log(
+  isNaN('abc'), // 숫자타입의 NaN으로 변환
+  Number.isNaN('abc') // 숫자타입 자체가 아니므로 false
+);
+
+// b. 동일함: parseInt, parseFloat
+// 각각 전역의 동명 메서드들을 가리킴 parseInt parseFloat
+console.log(
+  Number.parseInt('123.4567'),
+  Number.parseFloat('123.4567')
+);
 
 
+// 2. (안전한) 정수 여부 확인 isInteger, isSafeInteger
+console.log(
+  Number.isInteger(123),
+  Number.isInteger(123.45)
+);
+
+console.log(
+  // 암묵적 변환 하지 않음
+  Number.isInteger('123'),
+  Number.isInteger(true),
+  Number.isInteger(Infinity)
+);
+
+console.log(
+  Number.isSafeInteger(123),
+  Number.isSafeInteger(123.45)
+);
+
+
+console.log(
+  Number.isSafeInteger(Number.MAX_SAFE_INTEGER),
+  Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)
+);
 
