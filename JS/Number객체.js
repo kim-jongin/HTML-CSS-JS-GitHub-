@@ -117,3 +117,69 @@ console.log(
   Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)
 );
 
+// IV. 인스턴스 메서드
+// 값 자체에서 호출시 괄호로 감쌀 것 소수점과 구분 불가하므로
+
+// 1. toExponential
+// 지수 표기법으로 나타내는 문자열을 반환
+const numInExp = (123.456789).toExponential();
+console.log(
+  typeof(numInExp), numInExp
+);
+
+// 인자로 자릿수 제한
+console.log(
+  (123.456789).toExponential(2),
+  (123.456789).toExponential(4),
+  (123.456789).toExponential(6)
+);
+
+// 2. toFixed
+// 최대 인자값으로 주어진 정수(0~20)만큼 소수점 이하를 반올림하여 문자열로 반환
+console.log(
+  // 인자가 없으면 0을 받은 것과 같음
+  (111.234567).toFixed(),
+  (111.234567).toFixed(0)
+);
+
+console.log(
+  (111.234567).toFixed(1),
+  (111.234567).toFixed(2)
+);
+
+console.log(
+  // 반올림
+  (111.234567).toFixed(3),
+  (111.234567).toFixed(4)
+);
+
+// 3. toPrecision
+// 반올림과 지수 표기법을 사용하여 문자열 반환
+console.log(
+  // 인자가 없으면 toString처럼 그대로 문자열로 반환
+  (1234.56789).toPrecision()
+);
+
+// 인자가 정수부 자릿수보다 적으면 지수로
+console.log(
+  (1234.56789).toPrecision(1),
+  (1234.56789).toPrecision(2),
+  (1234.56789).toPrecision(3)
+);
+
+// 반올림
+console.log(
+  (1234.56789).toPrecision(4),
+  (1234.56789).toPrecision(6),
+  (1234.56789).toPrecision(8)
+);
+
+// 4. toString
+// 문자열 값 반환
+// 인자 2~36 가 주어지면 해당 수의 진수로 표현
+console.log(
+  (11).toString(),
+  (11).toString(2),
+  (11).toString(8),
+  (11).toString(16)
+);
